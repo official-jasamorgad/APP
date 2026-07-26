@@ -1,0 +1,5 @@
+/* App-level layout */
+.App {
+    min-height: 100vh;
+    position: relative;
+}

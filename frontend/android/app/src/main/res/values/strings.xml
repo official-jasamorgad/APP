@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">JASAMORGAD</string>
+    <string name="title_activity_main">JASAMORGAD</string>
+    <string name="package_name">id.jasamorgad.app</string>
+    <string name="custom_url_scheme">id.jasamorgad.app</string>
+</resources>

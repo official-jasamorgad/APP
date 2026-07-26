@@ -1,0 +1,119 @@
+{
+  "theme": "hybrid_fullstack",
+  "project_name": "Multi Services Marketplace",
+  "target_audience": "Indonesian/Southeast Asian market",
+  "design_concept": "Expressive Minimalism with a 'Phygital' and vibrant local feel. A modern Bento-grid approach that handles high data density but avoids the sterile 'SaaS' look.",
+  "colors": {
+    "primary": "#047857",
+    "secondary": "#C2410C",
+    "background_light": "#FAFAF9",
+    "background_dark": "#0C0A09",
+    "surface_light": "#FFFFFF",
+    "surface_dark": "#1C1917",
+    "text_light": "#1C1917",
+    "text_dark": "#F5F5F4",
+    "border_light": "#E7E5E4",
+    "border_dark": "#292524",
+    "rules": "Never use pure #000000 or #FFFFFF without context. Use Tinted Greys."
+  },
+  "typography": {
+    "heading_font": "Cabinet Grotesk",
+    "body_font": "Plus Jakarta Sans",
+    "rules": [
+      "Use Cabinet Grotesk for all Headings (H1-H4) with tight tracking.",
+      "Use Plus Jakarta Sans for Body and UI elements.",
+      "Never use Inter or generic sans for headings.",
+      "H1 Maximum size: text-4xl sm:text-5xl lg:text-6xl. DO NOT use text-7xl+."
+    ]
+  },
+  "layouts": {
+    "hero_section": "Asymmetrical Bento Grid. Left column spans 2/3 for dynamic search/banner, right column stacked for quick categories.",
+    "category_grid": "Dense 'Tetris' grid mixing square and tall rectangular cards for products vs services.",
+    "store_profile": "Full-width hero banner with 'Crystal Glass' floating header.",
+    "dashboards": "Strict high-density grid. Cardless UI with subtle 1px borders. Max radius 8px."
+  },
+  "visual_enhancers": {
+    "surfaces": "Use 'Crystal Glass' (backdrop-blur-xl bg-white/70 or bg-black/60) for sticky navigation.",
+    "shadows": "Ambient + Direct shadow layering.",
+    "borders": "Visible grid borders for data-heavy sections (border-collapse look).",
+    "textures": "Subtle noise overlay (grain) on dark mode backgrounds to add tactile feel."
+  },
+  "component_guidelines": {
+    "buttons": "Pill-shaped (rounded-full) for primary actions. Sharp (rounded-md) for dense dashboard actions.",
+    "cards": "Flat background, 1px subtle border, hover triggers slight lift.",
+    "forms": "Use Shadcn customized components (adapted for .js). Input fields should have generous padding.",
+    "navigation": "Sticky glass header. MUST have visible navigation on desktop.",
+    "overlays": "CRITICAL: DO NOT use complete transparent background in header, overlays, or dropdowns. Must have solid or blurred background."
+  },
+  "motion": {
+    "hover": "Explicitly set text color on hover (e.g. hover:bg-slate-900 hover:text-white).",
+    "entrance": "Staggered fade-up for marketplace item grids.",
+    "micro_interactions": "Heart icon (wishlist) must scale up and pop color on click."
+  },
+  "accessibility": {
+    "contrast": "Ensure text over images uses max bg-black/50 or text-shadow.",
+    "focus": "focus:ring-2 focus:ring-primary focus:ring-offset-2 on all inputs.",
+    "testing": "All interactive and key informational elements MUST include a `data-testid` attribute (e.g., data-testid='checkout-button')."
+  },
+  "media": {
+    "image_urls": [
+      {
+        "url": "https://images.pexels.com/photos/36745909/pexels-photo-36745909.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "description": "Vibrant indoor market scene with fresh vegetables",
+        "category": "hero_banner"
+      },
+      {
+        "url": "https://images.pexels.com/photos/30883971/pexels-photo-30883971.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "description": "Colorful street vendor stall at night market",
+        "category": "promotions_section"
+      },
+      {
+        "url": "https://images.pexels.com/photos/34404168/pexels-photo-34404168.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "description": "Technician repairing an electronic device",
+        "category": "featured_services_electronics"
+      },
+      {
+        "url": "https://images.pexels.com/photos/37340086/pexels-photo-37340086.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "description": "Worker using a plumbing tool",
+        "category": "featured_services_plumbing"
+      },
+      {
+        "url": "https://images.pexels.com/photos/32549955/pexels-photo-32549955.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "description": "Modern clothing store",
+        "category": "store_profile_banner"
+      }
+    ],
+    "image_rules": "Never use pure transparent overlays on hero images. Mobile image max-height 80vh. Use provided Unsplash/Pexels URLs. Do not use placeholder images."
+  },
+  "3d_libraries": {
+    "recommendation": "Use Framer Motion for simple spatial transitions. Avoid heavy WebGL unless for a specific interactive store map."
+  },
+  "GENERAL UI UX DESIGN GUIDELINES": [
+    "Design for .js files (React + Tailwind), not .tsx.",
+    "Adopt 'Expressive Minimalism' combining structural clarity with emotional aesthetics (high energy, dopamine design via accents).",
+    "Implement 'Phygital' integration vibes by ensuring mobile-first spatial experiences.",
+    "Use generous spacing: 2-3x more spacing than standard designs. Containers with borders must have internal padding.",
+    "Optical alignment over geometrical alignment (e.g. buttons with icons).",
+    "All interactive elements MUST include a `data-testid` attribute."
+  ],
+  "UNIVERSAL GUIDELINES FOR MAIN AGENT": [
+    "You tend to converge toward generic, 'on distribution' outputs. Avoid the 'AI slop' aesthetic.",
+    "Do not use dark colors as gradients. Use solid dark colors.",
+    "Never apply universal transition (transition: all). Use specific property transitions.",
+    "Never center align the main .App container in CSS.",
+    "Use sonner for toast notifications.",
+    "DO NOT use emojis as icons. Use lucide-react or @phosphor-icons/react.",
+    "Do not use generic 'card' wrappers everywhere. Build cardless/grid-based layouts for dashboards.",
+    "Every interaction needs micro-animations - hover states, transitions, parallax effects."
+  ],
+  "instructions_to_main_agent": [
+    "Build using React (.js/.jsx) + Tailwind CSS + Shadcn UI.",
+    "Start by setting up the dark/light mode toggle.",
+    "Implement the Layout container with sticky navigation (Glassmorphism, NO purely transparent backgrounds).",
+    "For the marketplace front page, use a Bento Grid layout.",
+    "For dashboard routes (Customer/Owner/Admin), use a tight density (gap-4) Sidebar layout.",
+    "Use pure HTML + Tailwind for creative marketing sections, and Shadcn for complex interactives (Forms, Modals).",
+    "Integrate multilingual (ID/EN) and multi-currency (IDR/USD) toggles visually in the top header.",
+    "Include couriers visually (JNE, J&T, SiCepat, POS Indonesia, AnterAja, Ninja Xpress, TIKI, Lion Parcel) in checkout."
+  ]
+}

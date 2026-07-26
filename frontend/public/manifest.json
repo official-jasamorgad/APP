@@ -1,0 +1,17 @@
+{
+  "short_name": "JASAMORGAD",
+  "name": "JASAMORGAD — Multi Services Marketplace",
+  "description": "Belanja produk dan booking layanan lokal di satu aplikasi.",
+  "icons": [
+    { "src": "/logo.png", "type": "image/png", "sizes": "512x512", "purpose": "any maskable" },
+    { "src": "/logo.png", "type": "image/png", "sizes": "192x192" }
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "theme_color": "#0f6b46",
+  "background_color": "#faf8f4",
+  "scope": "/",
+  "lang": "id",
+  "categories": ["shopping", "business", "lifestyle"]
+}
